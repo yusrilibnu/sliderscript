@@ -15,7 +15,10 @@ var	testim = document.getElementById("testim"),
 		ignoreTouch = 30;
 ;
 
-window.onload = function() {
+window.addEventListener ? 
+window.addEventListener("load",playSlide(slide),false) : 
+window.attachEvent && window.attachEvent("onload",playSlide(slide));
+
 
     // Testim Script
     function playSlide(slide) {
@@ -106,4 +109,4 @@ window.onload = function() {
 				}
 			
 		})
-}
+
